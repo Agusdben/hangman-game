@@ -7,7 +7,7 @@ import Button from './Button'
 import ModalClue from './ModalClue'
 
 const Clues = () => {
-  const { wordToGuess, playWithClues } = useGame()
+  const { wordToGuess, playWithClues, isPlaying } = useGame()
   const { language } = useLanguage()
   const { open, title, handleModal } = useModal({
     title: CLUES_LANG.clue[language]
@@ -15,14 +15,14 @@ const Clues = () => {
 
   const clues = useMemo(() => {
     return wordToGuess.clues[language]
-  }, [wordToGuess])
+  }, [isPlaying])
 
   const [clue, setClue] = useState(null)
 
   const handleClue = useCallback(() => {
     setClue(clues.shift() || CLUES_LANG.no_more_clues[language])
     handleModal()
-  }, [wordToGuess])
+  }, [wordToGuess.word[language]])
 
   if (playWithClues) {
     return (
