@@ -8,7 +8,7 @@ const App = () => {
   return (
     <LanguageContextProvider>
       <GameContextProvider>
-        <div className='min-h-screen overflow-x-hidden w-screen grid grid-rows-[70px_1fr_70px]'>
+        <div className='min-h-screen max-w-7xl mx-auto overflow-x-hidden w-screen grid grid-rows-[70px_1fr_70px]'>
           <Header />
           <Main />
           <Footer />
