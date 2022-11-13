@@ -1,0 +1,10 @@
+export const getRandomFromArr = arr => {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
+export const normalizeString = str => {
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+}
