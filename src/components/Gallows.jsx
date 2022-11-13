@@ -1,5 +1,5 @@
 import React from 'react'
-import GALLOWS from '../constants/GALLOWS'
+import GALLOWS from '../constants/gallows'
 import useGame from '../hooks/useGame'
 
 const Gallows = () => {
