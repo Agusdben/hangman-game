@@ -2,8 +2,7 @@ export const GAME_STATE_INITIAL_VALUE = {
   isPlaying: false,
   wordToGuess: null,
   lettersClicked: [],
-  playWithClues:
-    JSON.parse(window.localStorage.getItem('PlayWithClues')) || false,
+  playWithClues: JSON.parse(window.localStorage.getItem('PlayWithClues')),
   fails: 0,
   maxFails: 6
 }
