@@ -30,9 +30,13 @@ const useGame = () => {
   }
 
   const resetGame = () => {
+    const state = {
+      ...GAME_STATE_INITIAL_VALUE,
+      playWithClues: JSON.parse(window.localStorage.getItem('PlayWithClues'))
+    }
     dispatch({
       type: GAME_STATE_ACTIONS.RESET,
-      payload: GAME_STATE_INITIAL_VALUE
+      payload: state
     })
   }
 
